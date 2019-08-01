@@ -11,7 +11,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
-
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ItemComponent } from './pages/item/item.component';
   ],
   imports: [
     BrowserModule,
-    appRoutingModule
+    appRoutingModule,
+    HttpClientModule // PERMITE REALIZAR PETICIONES GET, PUT, DELETE, ETC A SERVICDORES REST POR EJEMPLO
   ],
   providers: [],
   bootstrap: [AppComponent]
